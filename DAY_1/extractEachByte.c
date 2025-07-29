@@ -1,6 +1,9 @@
-//  Write a program to extract each byte from a given number and storethem in a separate character variables and print the content of those vaiables.
+//  Write a program to extract each byte from a given number and store them in a separate character variables and print the content of those variables.
 
-int main() {
+#include <stdio.h>
+
+int main()
+{
     unsigned int num;
     unsigned char byte1, byte2, byte3, byte4;
 
@@ -9,10 +12,10 @@ int main() {
     scanf("%u", &num);
 
     // Extract bytes using bitwise AND and shifting
-    byte1 = (num & 0x000000FF);         // Least significant byte (LSB)
+    byte1 = (num & 0x000000FF); // Least significant byte (LSB)
     byte2 = (num & 0x0000FF00) >> 8;
     byte3 = (num & 0x00FF0000) >> 16;
-    byte4 = (num & 0xFF000000) >> 24;   // Most significant byte (MSB)
+    byte4 = (num & 0xFF000000) >> 24; // Most significant byte (MSB)
 
     // Display each byte
     printf("\nExtracted Bytes:\n");
